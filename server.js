@@ -5,7 +5,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const port = 5501;
+const port = 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname)));
 const db = mysql.createConnection({
     host: 'localhost',  
     user: 'root',
-    password: 'feliiB!nu$13',
+    password: '',
     database: 'optiview'
 });
 
