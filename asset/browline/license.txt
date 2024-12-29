@@ -1,0 +1,11 @@
+Model Information:
+* title:	Glasses
+* source:	https://sketchfab.com/3d-models/glasses-f632e59e1b4d4dd1b5889c3f24f5da78
+* author:	ahmed-youssuf (https://sketchfab.com/ahmed-youssuf)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Glasses" (https://sketchfab.com/3d-models/glasses-f632e59e1b4d4dd1b5889c3f24f5da78) by ahmed-youssuf (https://sketchfab.com/ahmed-youssuf) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
