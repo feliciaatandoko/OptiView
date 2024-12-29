@@ -1,0 +1,277 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Membuat elemen vertikal */
+    min-height: 100vh; /* Tinggi minimal layar penuh */
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bddb8;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #4caf50;
+}
+
+.navbar .profile-icon img {
+    height: 30px;
+    cursor: pointer;
+}
+/* NAVBAR END */
+
+.contact-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #333;
+}
+
+.form-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.form-group-inline label {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group-inline input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.form-group-inline input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center; /* Mengatur posisi horizontal */
+    align-items: center;    /* Mengatur posisi vertikal */
+}
+
+button {
+    width: 150px;
+    height: 55px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    background-color: #9bddb8;
+    color: #333;
+    display: inline-block;
+    text-align: center;
+    border: 0px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4caf50;
+}
+
+main {
+    flex: 1; /* Membuat elemen ini fleksibel untuk mengambil ruang yang tersisa */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Mengatur konten contact form agar selalu di tengah */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-section {
+    max-width: 600px;
+    width: 100%; /* Menyesuaikan lebar layar */
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+footer {
+    background-color: #9bddb8;
+    padding: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  
+  /* FOOTER LEFT */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 3%;
+    margin-top:3.5%;
+  }
+  
+  .footer-left .footer-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-left .footer-logo img {
+    height: 60px;
+  }
+  /* FOOTER LEFT END */
+  
+  /* FOOTER RIGHT */
+  .footer-right .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-right .footer-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .footer-right .footer-links li a:hover {
+    color: #4caf50;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: wrap;
+    align-items: left;
+    gap: 15px;
+    width: 450px;
+    height: 150px;
+  }
+  
+  .footer-right .row{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .footer-right .footer-col1{
+    width: 40%;
+    padding:20px;
+  }
+  
+  .footer-right .footer-col2{
+    width: 50%;
+    padding:20px;
+  }
+  
+  .footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-right .social-icons a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .footer-right .social-icons a:hover {
+    color: #4caf50;
+  }
+  
+  .footer-right .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+  }
+  
+  .footer-right .contact-info .icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .footer-right .contact-info .icon img {
+    height: 25px;
+    width: 20px;
+    margin-right:10px;  
+  }
+  
+  .footer-right .contact-info .icon .location {
+    height: 30px;
+    width: 20px;
+    margin-right:10px;
+  }
+  
+  .footer-right .social-icons .icon img {
+    height: 25px;
+    width: 20px;
+  }
+  /* FOOTER RIGHT END */
+  /* FOOTER END */

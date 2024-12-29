@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-aframe.prod.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const list = ["round", "aviator", "cateye", "browline", "square"];
+        const visibles = [false, false, false, false, false]; // No glasses visible initially
+        const setVisible = (button, entities, visible) => {
+          if (visible) {
+            button.classList.add("selected");
+          } else {
+            button.classList.remove("selected");
+          }
+          entities.forEach((entity) => {
+            entity.setAttribute("visible", visible);
+          });
+        };
+
+        list.forEach((item, index) => {
+          const button = document.querySelector("#" + item);
+          const entities = document.querySelectorAll("." + item + "-entity");
+          
+          // Initially, no glasses are visible
+          setVisible(button, entities, visibles[index]);
+          
+          button.addEventListener('click', () => {
+            // Set all glasses to invisible
+            visibles.forEach((_, idx) => visibles[idx] = false);
+            visibles[index] = !visibles[index]; // Toggle the selected frame
+            
+            // Hide all entities and set the selected one to visible
+            list.forEach((frame, idx) => {
+              setVisible(document.querySelector("#" + frame), 
+                document.querySelectorAll("." + frame + "-entity"), visibles[idx]);
+            });
+            
+            // If no glasses are selected, show the default text
+            document.querySelector("#defaultText").style.display = visibles[index] ? 'none' : 'block';
+          });
+        });
+
+        // Hide "Choose your frame" text during loading
+        document.querySelector("#defaultText").style.display = "none";
+        window.addEventListener("load", function() {
+          document.querySelector("#defaultText").style.display = "block";
+        });
+      });
+    </script>
+    <style>
+        body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        main {
+        flex-grow: 1; /* Make main content take up available space */
+        }
+
+        /* NAVBAR */
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #9bddb8;
+        padding: 10px 20px;
+        height: 60px;
+        }
+
+        .navbar .logo img {
+        height: 40px;
+        }
+
+        .navbar .nav-links {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        }
+
+        .navbar .nav-links li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        transition: color 0.3s;
+        }
+
+        .navbar .nav-links li a:hover {
+        color: #4caf50;
+        }
+
+        .navbar .profile-icon img {
+        height: 30px;
+        cursor: pointer;
+        }
+        /* NAVBAR END */
+      .example-container {
+        overflow: hidden;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+      }
+      
+      .options-panel {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .options-panel img {
+        border: solid 2px;
+        width: 60px;
+        height: 60px;
+        object-fit: contain; /* Prevent cropping */
+        cursor: pointer;
+        background-color: white;
+      }
+      .options-panel img.selected {
+        border-color: green;
+      }
+      .options-panel span {
+        font-size: 12px;
+        text-align: center;
+        display: block;
+        margin-top: 5px;
+        color: white;
+      }
+      #defaultText {
+        position: fixed;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 35px;
+        color: white;
+        z-index: 2;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      #desc {
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+      }
+
+   
+    </style>
+  </head>
+
+
+  <body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="asset/logo.png" alt="OptiView Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="checkup.html">CHECK UP</a></li>
+                <li><a href="location.html">LOCATION</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <div class="profile-icon">
+                    <a href="account.html">
+                        <img src="asset/icon_account.png" alt="Profile Icon">
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="example-container">
+        <div id="defaultText">Choose Your Frame</div> <!-- Default message -->
+        <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+            <a-assets>
+            <a-asset-item id="headModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/face-tracking/assets/sparkar/headOccluder.glb"></a-asset-item>
+            <a-asset-item id="cateyeModel" src="asset/cateye/scene.gltf"></a-asset-item>
+            <a-asset-item id="browlineModel" src="asset/browline/scene.gltf"></a-asset-item>
+            <a-asset-item id="roundModel" src="asset/round/scene.gltf"></a-asset-item>
+            <a-asset-item id="aviatorModel" src="asset/aviator/scene.gltf"></a-asset-item>
+            <a-asset-item id="squareModel" src="asset/square/scene.gltf"></a-asset-item>
+            </a-assets>
+            <a-camera active="false" position="0 0 0"></a-camera>
+            <!-- head occluder -->
+            <a-entity mindar-face-target="anchorIndex: 168">
+            <a-gltf-model mindar-face-occluder position="0 -0.3 0.15"rotation="0 0 0" scale="0.065 0.065 0.065" src="#headModel"></a-gltf-model>
+            </a-entity>
+            <a-entity mindar-face-target="anchorIndex: 168">
+            <a-gltf-model rotation="0 0 0" position="0 -0.12 0.1" scale="0.0035 0.0035 0.0035" src="#aviatorModel" class="aviator-entity" visible="false"></a-gltf-model>
+            </a-entity>
+            <a-entity mindar-face-target="anchorIndex: 168">
+            <a-gltf-model rotation="0 0 0" position="0 -0.22 0.2" scale="3.7 3.7 3.7" src="#cateyeModel" class="cateye-entity" visible="false"></a-gltf-model>
+            </a-entity>
+            <a-entity mindar-face-target="anchorIndex: 168">
+            <a-gltf-model rotation="0 0 0" position="0 -0.1 0" scale="6 6 6" src="#browlineModel" class="browline-entity" visible="false"></a-gltf-model>
+            </a-entity>
+            <a-entity mindar-face-target="anchorIndex: 127">
+            <a-gltf-model rotation="0 -90 0" position="0.5 -0.4 0.3" scale="0.08 0.08 0.08" src="#squareModel" class="square-entity" visible="false"></a-gltf-model>
+            </a-entity>
+            <a-entity mindar-face-target="anchorIndex: 356">
+            <a-gltf-model rotation="0 90 0" position="-0.48 -0.25 0.4" scale="0.055 0.055 0.055" src="#roundModel" class="round-entity" visible="false"></a-gltf-model>
+            </a-entity>
+        </a-scene>
+        </div>
+
+        <div class="options-panel">
+            <div>
+            <img id="cateye" src="asset/product_1.png" />
+            <span id="desc">Cateye</span>
+            </div>
+            <div>
+            <img id="browline" src="asset/product_3.png" />
+            <span id="desc">Browline</span>
+            </div>
+            <div>
+            <img id="round" src="asset/product_8.png" />
+            <span id="desc">Round</span>
+            </div>
+            <div>
+            <img id="aviator" src="asset/product_26.png" />
+            <span id="desc">Aviator</span>
+            </div>
+            <div>
+            <img id="square" src="asset/product_28.png" />
+            <span id="desc">Square</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

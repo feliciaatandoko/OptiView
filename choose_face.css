@@ -1,0 +1,302 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bddb8;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #4caf50;
+}
+
+.navbar .profile-icon img {
+    height: 30px;
+    cursor: pointer;
+}
+/* NAVBAR END */
+
+/* MAIN */
+/* MAIN TEXT */
+.main-text {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-text .text-box {
+    /* width: 30%; */
+    height: 10%;
+    text-align: center;
+}
+/* MAIN TEXT END */
+
+.frame {
+    text-align: center;
+    padding: 20px 0;
+}
+  
+.frame-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #000;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.face-shapes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 900px;    
+}
+
+.face-shape:nth-child(5), .face-shape:nth-child(6) {
+    /* grid-column: span 2; */
+    margin-left: 210%;
+    justify-self: center; /* Center the last two images */
+    gap: 0; /* Match the spacing to images above */
+}
+
+.face-shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.face-shape img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.face-shape:hover {
+    border-color:  #9bddb8;
+    /* border-width: 3px; */
+}
+
+.face-shape.active {
+    border-color:  #9bddb8;
+    transform: scale(1.1);
+}
+
+.submit {
+    display: flex;
+    justify-content: center; /* Mengatur posisi horizontal */
+    align-items: center;    /* Mengatur posisi vertikal */
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+button:hover {
+    background-color: #9bddb8;
+}
+
+.btn {
+    width: 250px;
+    height: 55px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    background-color: #9bddb8;
+    color: #333;
+    display: inline-block;
+    text-align: center;
+    border: 0px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.btn:hover:enabled {
+    background-color: #9bddb8;
+}
+
+/* MAIN END */
+
+
+/* FOOTER */
+footer {
+    background-color: #9bddb8;
+    padding: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* FOOTER LEFT */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 3%;
+    margin-top:3.5%;
+}
+
+.footer-left .footer-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left .footer-logo img {
+    height: 60px;
+}
+/* FOOTER LEFT END */
+
+/* FOOTER RIGHT */
+.footer-right .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right .footer-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-right .footer-links li a:hover {
+    color: #4caf50;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: wrap;
+    align-items: left;
+    gap: 15px;
+    width: 450px;
+    height: 150px;
+}
+
+.footer-right .row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footer-right .footer-col1{
+    width: 40%;
+    padding:20px;
+}
+
+.footer-right .footer-col2{
+    width: 50%;
+    padding:20px;
+}
+
+.footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right .social-icons a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.footer-right .social-icons a:hover {
+    color: #4caf50;
+}
+
+.footer-right .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+}
+
+.footer-right .contact-info .icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-right .contact-info .icon img {
+    height: 25px;
+    width: 20px;
+    margin-right:10px;  
+}
+
+.footer-right .contact-info .icon .location {
+    height: 30px;
+    width: 20px;
+    margin-right:10px;
+}
+
+.footer-right .social-icons .icon img {
+    height: 25px;
+    width: 20px;
+}
+/* FOOTER RIGHT END */
+/* FOOTER END */

@@ -1,0 +1,256 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9bddb8;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #4caf50;
+}
+
+.navbar .profile-icon img {
+  height: 30px;
+  cursor: pointer;
+}
+/* NAVBAR END */
+
+/* BANNER IMAGE */
+.banner img {
+  width: 100%;
+  display: block;
+}
+/* BANNER IMAGE END */
+
+/* MAIN TEXT */
+.main-text {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-text .text-box {
+  width: 30%;
+  height: 10%;
+  text-align: center;
+}
+/* MAIN TEXT END */
+
+/* HOMEPAGE SECTION 2 */
+.container-home-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-home-2 .frames {
+  width: 75%;
+  display: block;
+}
+
+.container-home-2 .frames img {
+  width: 100%;
+  display: block;
+}
+
+.container-home-2 .button-shop-now {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-home-2 .button-shop-now button {
+  background-color: #B2EAC7;
+  width: 150px;
+  height: 55px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  border: 0px;
+  border-radius: 20px;
+}
+
+.container-home-2 .button-shop-now button a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+/* HOMEPAGE SECTION 2 END */
+
+/* HOMEPAGE SECTION 3 */
+.container-home-3 {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-home-3 .promo-images img{
+  width: 100%;
+  margin-bottom: 80px;
+}
+/* HOMEPAGE SECTION 3 END */
+
+/* FOOTER */
+footer {
+  background-color: #9bddb8;
+  padding: 20px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+/* FOOTER LEFT */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: 3%;
+  margin-top:3.5%;
+}
+
+.footer-left .footer-logo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .footer-logo img {
+  height: 60px;
+}
+/* FOOTER LEFT END */
+
+/* FOOTER RIGHT */
+.footer-right .footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right .footer-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-right .footer-links li a:hover {
+  color: #4caf50;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: wrap;
+  align-items: left;
+  gap: 15px;
+  width: 450px;
+  height: 150px;
+}
+
+.footer-right .row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.footer-right .footer-col1{
+  width: 40%;
+  padding:20px;
+}
+
+.footer-right .footer-col2{
+  width: 50%;
+  padding:20px;
+}
+
+.footer-right .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right .social-icons a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.footer-right .social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-right .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
+}
+
+.footer-right .contact-info .icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-right .contact-info .icon img {
+  height: 25px;
+  width: 20px;
+  margin-right:10px;  
+}
+
+.footer-right .contact-info .icon .location {
+  height: 30px;
+  width: 20px;
+  margin-right:10px;
+}
+
+.footer-right .social-icons .icon img {
+  height: 25px;
+  width: 20px;
+}
+/* FOOTER RIGHT END */
+/* FOOTER END */

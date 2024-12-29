@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OptiView Homepage</title>
+    <link rel="stylesheet" href="transaction.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="asset/logo.png" alt="OptiView Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="checkup.html">CHECK UP</a></li>
+                <li><a href="location.html">LOCATION</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+                <div class="profile-icon">
+                    <a href="account.html">
+                        <img src="asset/icon_account.png" alt="Profile Icon">
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="your-purchase">
+                <p class="left-text">Your Purchase</p>
+                <p class="right-text">Price</p>
+            </div>
+
+            <div class="purchase-container">
+                <div class="product-image">
+                    <img src="asset/product_3.png" alt="Product">
+                </div>
+                <div class="product-information">
+                    <p class="product">SmartBuy Collection</p>
+                    <p class="brand">Murf</p>
+                    <div class="minus">
+                        <div class="small-box">
+                            <p>L</p>
+                        </div>
+                        <div class="big-box">
+                            <button class="value-control" onclick="decrement('left-input')">-</button>
+                            <input id="left-input" class="value-input" type="number" value="0">
+                            <button class="value-control" onclick="increment('left-input')">+</button>
+                        </div>
+                        <div class="small-box">
+                            <p>R</p>
+                        </div>
+                        <div class="big-box">
+                            <button class="value-control" onclick="decrement('right-input')">-</button>
+                            <input id="right-input" class="value-input" type="number" value="0">
+                            <button class="value-control" onclick="increment('right-input')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <p>Rp. 879,000</p>
+                </div>
+            </div>
+
+            <div class="location-payment">
+                <div class="menu">
+                    <p>Pick-up Location</p>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-one" name="location" value="Jl. Jelambar Barat II" checked="checked" type="radio">
+                        <label for="option-location-one">
+                            <span></span>
+                            Jl. Jelambar Barat II
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-two" name="location" value="Jl. Kemanggisan Raya" type="radio">
+                        <label for="option-location-two">
+                            <span></span>
+                            Jl. Kemanggisan Raya
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-three" name="location" value="Jl. Meruya Ilir Raya" type="radio">
+                        <label for="option-location-three">
+                            <span></span>
+                            Jl. Meruya Ilir Raya
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-four" name="location" value="Jl. Pekapuran I" type="radio">
+                        <label for="option-location-four">
+                            <span></span>
+                            Jl. Pekapuran I
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-five" name="location" value="Jl. Prepedan Dalam" type="radio">
+                        <label for="option-location-five">
+                            <span></span>
+                            Jl. Prepedan Dalam
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-six" name="location" value="Jl. Puri Kembangan" type="radio">
+                        <label for="option-location-six">
+                            <span></span>
+                            Jl. Puri Kembangan
+                        </label>
+                    </div>
+                    <div class="pilih-lokasi">
+                        <input id="option-location-seven" name="location" value="Jl. Daan Mogot" type="radio">
+                        <label for="option-location-seven">
+                            <span></span>
+                            Jl. Daan Mogot
+                        </label>
+                    </div>
+                </div>
+                <div class="menu">
+                    <p>Payment Method</p>
+                    <div class="pilih-payment">
+                        <input id="option-payment-in-store" name="payment" value="In Store" checked="checked" type="radio" onclick="showPaymentNote()">
+                        <label for="option-payment-in-store">
+                            <span></span>
+                            In Store
+                        </label>
+                        <p id="in-store-note" class="note">*Please make sure to bring cash/debit card/credit card when pickup</p>
+                    </div>
+                    <div class="pilih-payment">
+                        <input id="option-payment-virtual" name="payment" value="Virtual Account" type="radio" onclick="showPaymentNote()">
+                        <label for="option-payment-virtual">
+                            <span></span>
+                            Virtual Account
+                        </label>
+                        <p id="virtual-note" class="note">*VA Number: 7551088752376 <br>*Please send your payment proof to our email: optiview@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="submit-button">
+                <div class="box">
+                    <button>
+                        <a href="homepage.html">CANCEL</a>
+                    </button>
+                </div>
+                <div class="box">
+                    <button type="button" id="checkoutBtn">CHECK OUT</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            ...
+        </div>
+        <div class="footer-right">
+            ...
+        </div>
+    </footer>
+
+    <script>
+        function increment(inputId) {
+            const input = document.getElementById(inputId);
+            let value = parseFloat(input.value);
+            value += 0.25;
+            input.value = value.toFixed(2);
+        }
+
+        function decrement(inputId) {
+            const input = document.getElementById(inputId);
+            let value = parseFloat(input.value);
+            value -= 0.25;
+            if (value < 0) value = 0;
+            input.value = value.toFixed(2);
+        }
+
+        document.querySelectorAll('.value-input').forEach(input => {
+            input.addEventListener('input', function () {
+                let value = parseFloat(this.value);
+                if (isNaN(value) || value < 0) {
+                    value = 0; 
+                }
+                value = Math.round(value * 4) / 4;
+                this.value = value.toFixed(2);
+            });
+        });
+
+        function showPaymentNote() {
+            const inStoreOption = document.getElementById('option-payment-in-store');
+            const virtualOption = document.getElementById('option-payment-virtual');
+            
+            const inStoreNote = document.getElementById('in-store-note');
+            const virtualNote = document.getElementById('virtual-note');
+            
+            if (inStoreOption.checked) {
+                inStoreNote.style.display = 'block';
+                virtualNote.style.display = 'none';
+            } else if (virtualOption.checked) {
+                inStoreNote.style.display = 'none';
+                virtualNote.style.display = 'block';
+            }
+        }
+
+        window.onload = function() {
+            showPaymentNote();
+        };
+
+        document.getElementById('checkoutBtn').addEventListener('click', function(event) {
+            event.preventDefault(); 
+            
+            let locationValue = "";
+            const locationRadios = document.getElementsByName('location');
+            for (let i = 0; i < locationRadios.length; i++) {
+                if (locationRadios[i].checked) {
+                    locationValue = locationRadios[i].value;
+                    break;
+                }
+            }
+
+            let paymentValue = "";
+            const paymentRadios = document.getElementsByName('payment');
+            for (let i = 0; i < paymentRadios.length; i++) {
+                if (paymentRadios[i].checked) {
+                    paymentValue = paymentRadios[i].value;
+                    break;
+                }
+            }
+
+            const product_id = 3;   
+            const account_id = 1;   
+
+            fetch('http://localhost:5501/api/transaction', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    product_id: product_id,
+                    account_id: account_id,
+                    location: locationValue,
+                    payment: paymentValue
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Transaction response:', data);
+                if (data.success) {
+                    window.location.href = 'confirmation.html';
+                } else {
+                    alert('Terjadi error saat menyimpan transaksi.');
+                }
+            })
+            .catch(error => {
+                console.error('Error saving transaction:', error);
+                alert('Terjadi error saat menyimpan transaksi.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9bddb8;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #4caf50;
+}
+
+.navbar .profile-icon img {
+  height: 30px;
+  cursor: pointer;
+}
+/* NAVBAR END */
+
+/* MAIN TEXT */
+.main-text {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* MAIN TEXT END */
+
+/* Map Container */
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0; 
+  padding: 0;
+  height: calc(100vh - 160px);
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 80px;
+}
+
+/* Memperbesar tinggi peta, menggunakan viewport units untuk responsivitas */
+.map-image {
+  position: relative;
+  width: 45%;  /* Menggunakan 100% untuk lebar */
+  height: 150vh; /* Memastikan peta menyesuaikan tinggi layar */
+  background: url("asset/jakbar_maps.png") no-repeat center center;
+  background-size: contain; /* Ukuran peta tetap proporsional */
+}
+
+/* Lokasi Marker */
+.location-marker {
+  position: absolute;
+  width: 1vw; /* Menggunakan vw untuk ukuran marker, agar responsif */
+  height: 1vw; /* Ukuran marker menyesuaikan dengan layar */
+  background-color: #003366; 
+  border-radius: 50%;
+  border: 3px solid #003366;
+  cursor: pointer;
+}
+
+/* Posisi marker berdasarkan lokasi */
+.location-marker[data-location="Jl. Prepedan Dalam"] {
+  top: 17.5%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 15.5%;
+}
+
+.location-marker[data-location="Jl. Daan Mogot"] {
+  top: 46.3%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 24.0%;
+}
+
+.location-marker[data-location="Jl. Puri Kembangan"] {
+  top: 64.0%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 41.7%;
+}
+
+.location-marker[data-location="Jl. Meruya Ilir Raya"] {
+  top: 79.5%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 44.5%;
+}
+
+.location-marker[data-location="Jl. Jelambar Barat II"] {
+  top: 43.0%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 65.5%;
+}
+
+.location-marker[data-location="Jl. Kemanggisan Raya"] {
+  top: 72.5%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 68.1%;
+}
+
+.location-marker[data-location="Jl. Pekapuran I"] {
+  top: 39.5%;  /* Menyesuaikan agar tepat di atas titik */
+  left: 85%;
+}
+
+/* Hover efek pada marker */
+.location-marker:hover::after {
+  content: attr(data-location);
+  position: absolute;
+  top: -50px; /* Menyesuaikan jarak antara marker dan text hover */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c5e8c8;
+  color: #000;
+  padding: 10px 10px; /* Memperbesar padding agar teks lebih besar */
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 15px; /* Memperbesar ukuran font di sini */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  font-weight:500;
+}
+
+/* FOOTER */
+footer {
+  background-color: #9bddb8;
+  padding: 20px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+/* FOOTER LEFT */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: 3%;
+  margin-top:3.5%;
+}
+
+.footer-left .footer-logo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .footer-logo img {
+  height: 60px;
+}
+/* FOOTER LEFT END */
+
+/* FOOTER RIGHT */
+.footer-right .footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-right .footer-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-right .footer-links li a:hover {
+  color: #4caf50;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: wrap;
+  align-items: left;
+  gap: 15px;
+  width: 450px;
+  height: 150px;
+}
+
+.footer-right .row{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.footer-right .footer-col1{
+  width: 40%;
+  padding:20px;
+}
+
+.footer-right .footer-col2{
+  width: 50%;
+  padding:20px;
+}
+
+.footer-right .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right .social-icons a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.footer-right .social-icons a:hover {
+  color: #4caf50;
+}
+
+.footer-right .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 5px;
+}
+
+.footer-right .contact-info .icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-right .contact-info .icon img {
+  height: 25px;
+  width: 20px;
+  margin-right:10px;  
+}
+
+.footer-right .contact-info .icon .location {
+  height: 30px;
+  width: 20px;
+  margin-right:10px;
+}
+
+.footer-right .social-icons .icon img {
+  height: 25px;
+  width: 20px;
+}
+/* FOOTER RIGHT END */
+/* FOOTER END */

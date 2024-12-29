@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - OptiView</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sign_in.css">
+  <style>
+    .error-message {
+      color: red;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="asset/logo.png" alt="OptiView Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="checkup.html">CHECK UP</a></li>
+        <li><a href="location.html">LOCATION</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <div class="profile-icon">
+          <a href="account.html">
+            <img src="asset/icon_account.png" alt="Profile Icon">
+          </a>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="form-container">
+      <div class="form-header">
+        <img src="asset/logo.png" alt="OptiView Logo" class="form-logo">
+        <h1>WELCOME TO OPTIVIEW</h1>
+      </div>
+      <form id="sign-in-form">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <span id="email-error" class="error-message">Invalid email or password.</span>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <span id="password-error" class="error-message">Invalid email or password.</span>
+
+        <button type="submit" id="sign-in-button">SIGN IN</button>
+
+        <p>Don't have an account? <a href="sign_up.html">Sign Up</a></p>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="asset/logo.png" alt="OptiView Logo">
+      </div>
+      <div class="footer-links">
+        <p><a href="homepage.html">HOME</a></p>
+        <p><a href="product.html">PRODUCT</a></p>
+        <p><a href="checkup.html">CHECK UP</a></p>
+        <p><a href="location.html">LOCATION</a></p>
+        <p><a href="contact.html">CONTACT US</a></p>
+      </div>
+      <div class="footer-contact">
+        <div>
+          <a href="https://x.com/yourprofile" target="_blank">
+            <img src="asset/icon_twitter.png" alt="Twitter Icon">
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank">
+            <img src="asset/icon_instagram.png" alt="Instagram Icon">
+          </a>
+        </div>
+        <p>
+          <img src="asset/icon_location.png" alt="Location Icon">
+          Jl. Merdeka Selatan No. 45, Jakarta Barat 11480
+        </p>
+        <p>
+          <img src="asset/icon_phone.png" alt="Phone Icon">
+          0812-3456-789
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="sign_in.js"></script>
+  
+</body>
+</html>

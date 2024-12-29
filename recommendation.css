@@ -1,0 +1,450 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9bddb8;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #4caf50;
+}
+
+.navbar .profile-icon img {
+    height: 30px;
+    cursor: pointer;
+}
+/* NAVBAR END */
+
+
+/* MAIN TEXT */
+.main-text {
+    margin-top: 30px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.main-text .text-box {
+    /* width: 30%; */
+    height: 10%;
+    text-align: center;
+}
+/* MAIN TEXT END */
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 280px;
+    height: 35px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    background-color: #9bddb8;
+    text-align: center;
+    border: 0px;
+    border-radius: 25px;
+    padding: 10px 0;
+}
+
+.type {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center; /* Mengatur posisi horizontal */
+    align-items: center;
+    text-align: center;
+}
+
+.try-glasses-frame {
+    position: absolute;
+    top: 47%; /* Positioning it below the "TRY NOW!" box */
+    left: 55%;
+    transform: translate(-70%, -55%);
+    width: 320px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.try-glasses-frame a {
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+}
+
+.try-glasses-frame:hover a{
+    color: #1e7e34; /* Darker green on hover */
+}
+
+
+
+.banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    /* max-width: 1200px; */
+    height: auto;
+    display: block;
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: white;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 8px;
+    gap: 30px;
+}
+
+.best-seller {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.best-seller-image {
+    max-width: 100%; /* Adjust the width of the image */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.best-seller-details {
+    flex: 1; /* Allow the text to take remaining space */
+    width: 300px;
+    margin-right: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.best-seller-details h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.best-seller-details h5 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #333;
+}
+
+.best-seller-details p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.best-seller:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buy-now {
+    color: #9bddb8;
+    text-decoration: underline;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #B2EAC7;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.buy-now:hover {
+    background-color: #B2EAC7;
+    color: #fff;
+}
+
+/* Bagian Deskripsi */
+.description-box {
+    max-width: 1000px; /* Lebar maksimum deskripsi */
+    padding: 15px;
+    background-color: #eaeaea; /* Kotak abu-abu */
+    border-radius: 8px;
+    line-height: 1.6;
+    margin-right: 0px;
+    display: block;
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
+.description-box h3 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* OTHER RECOMM */
+.other-recommendations {
+    margin-top: 30px;
+}
+
+.other-recommendations h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recommendation {
+    width: 300px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.recommendation img {
+    max-width: 100%;
+}
+
+.recommendation h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.recommendation h5{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: #333;
+}
+.recommendation p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recommendation:hover{
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.recommendation .buy-now {
+    color: #9bddb8;
+    text-decoration: underline;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #B2EAC7;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.recommendation .buy-now:hover {
+    background-color: #B2EAC7;
+    color: #fff;
+}
+
+/* Bagian See More */
+.see-more {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.see-more-link {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.see-more-link:hover {
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #9bddb8;
+    padding: 20px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+/* FOOTER LEFT */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 3%;
+    margin-top:3.5%;
+}
+
+.footer-left .footer-logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-left .footer-logo img {
+    height: 60px;
+}
+/* FOOTER LEFT END */
+
+/* FOOTER RIGHT */
+.footer-right .footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-right .footer-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-right .footer-links li a:hover {
+    color: #4caf50;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: wrap;
+    align-items: left;
+    gap: 15px;
+    width: 450px;
+    height: 150px;
+}
+
+.footer-right .row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.footer-right .footer-col1{
+    width: 40%;
+    padding:20px;
+}
+
+.footer-right .footer-col2{
+    width: 50%;
+    padding:20px;
+}
+
+.footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-right .social-icons a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.footer-right .social-icons a:hover {
+    color: #4caf50;
+}
+
+.footer-right .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+}
+
+.footer-right .contact-info .icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-right .contact-info .icon img {
+    height: 25px;
+    width: 20px;
+    margin-right:10px;  
+}
+
+.footer-right .contact-info .icon .location {
+    height: 30px;
+    width: 20px;
+    margin-right:10px;
+}
+
+.footer-right .social-icons .icon img {
+    height: 25px;
+    width: 20px;
+}
+/* FOOTER RIGHT END */
+/* FOOTER END */
