@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Data - OptiView</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="change_data.css">
+</head>
+<body>
+ <!-- Header -->
+ <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="asset/logo.png" alt="OptiView Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+        <li><a href="checkup.html">CHECK UP</a></li>
+        <li><a href="location.html">LOCATION</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <div class="profile-icon">
+          <a href="account.html">
+            <img src="asset/icon_account.png" alt="Profile Icon">
+          </a>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <div class="form-header">
+        <img src="asset/logo.png" alt="OptiView Logo" class="form-logo">
+        <h1>CHANGE YOUR DATA</h1>
+      </div>
+      <form class="change-data-form" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <small id="phone-error" class="error-message"></small>
+        
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>        
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected hidden>Select your gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="password">New Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your new password" required>
+    
+        <label for="confirm-password">Confirm New Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password" required>
+    
+        <button type="submit" id="sign-up-button">CONFIRM CHANGE</button>
+    </form>    
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="asset/logo.png" alt="OptiView Logo">
+      </div>
+      <div class="footer-links">
+        <p><a href="homepage.html">HOME</a></p>
+        <p><a href="product.html">PRODUCT</a></p>
+        <p><a href="checkup.html">CHECK UP</a></p>
+        <p><a href="location.html">LOCATION</a></p>
+        <p><a href="contact.html">CONTACT US</a></p>
+      </div>
+      <div class="footer-contact">
+        <div>
+          <a href="https://x.com/yourprofile" target="_blank">
+            <img src="asset/icon_twitter.png" alt="Twitter Icon">
+          </a>
+          <a href="https://instagram.com/yourprofile" target="_blank">
+            <img src="asset/icon_instagram.png" alt="Instagram Icon">
+          </a>
+        </div>
+        <p>
+          <img src="asset/icon_location.png" alt="Location Icon">
+          Jl. Merdeka Selatan No. 45, Jakarta Barat 11480
+        </p>
+        <p>
+          <img src="asset/icon_phone.png" alt="Phone Icon">
+          0812-3456-789
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="change_data.js"></script>
+</body>
+</html>
